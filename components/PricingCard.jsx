@@ -18,15 +18,15 @@ export default function PricingCard({ plan, benefits }) {
     return (
         <div>
             {/* tier label */}
-            <div className={getTierColor() + " w-[169px] h-[35px] rounded-t-[8px]"}>
-                <p className="text-white">{plan.type.toUpperCase()}</p>
+            <div className={getTierColor() + " w-[169px] h-[35px] rounded-t-[8px] pl-[28px] py-[6px]"}>
+                <p className="text-white font-text-b">{plan.type.toUpperCase()}</p>
             </div>
             {/* main section */}
             <div className="bg-white w-[327px] h-[381px] py-[32px] px-[16px] rounded-b-[8px] flex flex-col gap-[16px]">
                 {/* pricing panel */}
                 <div>
-                    <p className="text-center">{plan.price}$</p>
-                    <p className="text-center">{plan.duration}</p>
+                    <p className="text-center font-menu-title">{plan.price}$</p>
+                    <p className="text-center font-subtext">{plan.duration}</p>
                 </div>
                 {/* aviable benefits list */}
                 <div>
