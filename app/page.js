@@ -1,4 +1,5 @@
-import PricingCard from "@/components/PricingCard";
+import CardsPanel from "@/components/CardsPanel";
+
 import { getBenefits, getPlans } from "@/database/methods";
 
 export default async function Home() {
@@ -7,10 +8,6 @@ export default async function Home() {
   const benefits = await getBenefits();
   
   return (
-    <div className="flex gap-[50px]">
-      {
-        plans.map(plan => <PricingCard key={plan.type} plan={plan} benefits={benefits} />)
-      }
-    </div>
+    <CardsPanel plans={plans} benefits={benefits} />
   );
 }

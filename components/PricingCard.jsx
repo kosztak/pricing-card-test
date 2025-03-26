@@ -16,7 +16,7 @@ export default function PricingCard({ plan, benefits }) {
     }
 
     return (
-        <div>
+        <>
             {/* tier label */}
             <div className={getTierColor() + " w-[169px] h-[35px] rounded-t-[8px] pl-[28px] py-[6px]"}>
                 <p className="text-white font-text-b">{plan.type.toUpperCase()}</p>
@@ -38,6 +38,6 @@ export default function PricingCard({ plan, benefits }) {
                 </div>
                 <Button>Try now</Button>
             </div>
-        </div>
+        </>
     )
 }
