@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, ref } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCgizgeydwKP5pxp4j7lFle8OEfeLQaJgg",
-  authDomain: "pricing-cards-db.firebaseapp.com",
-  databaseURL: "https://pricing-cards-db-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "pricing-cards-db",
-  storageBucket: "pricing-cards-db.firebasestorage.app",
-  messagingSenderId: "142998745858",
-  appId: "1:142998745858:web:3bfaa140ebf7fde1a5881b"
+  apiKey: "AIzaSyC1lbW3Mirx8HvHJnLN6vAo27zRoTYcpwM",
+  authDomain: "pricing-cards-test.firebaseapp.com",
+  projectId: "pricing-cards-test",
+  databaseURL: "https://pricing-cards-test-default-rtdb.europe-west1.firebasedatabase.app",
+  storageBucket: "pricing-cards-test.firebasestorage.app",
+  messagingSenderId: "636331095147",
+  appId: "1:636331095147:web:4dc1db2d6a43947655ed2e"
 };
 
 const database = getDatabase(initializeApp(firebaseConfig));
