@@ -1,31 +1,42 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 
-import DesktopView from './views/DesktopView';
-import MobileView from './views/MobileView';
+import PricingCard from './PricingCard';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default ({ plans, benefits }) => {
-    const [isMobileView, setIsMobileView] = useState(false);
-
-    useEffect(() => {
-        // Check if the screen width is mobile-sized
-        const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 768); // Adjust breakpoint as needed
-        };
-
-        handleResize();
-        
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-  return (
-        isMobileView? 
-            <MobileView plans={plans} benefits={benefits} /> : 
-            <DesktopView plans={plans} benefits={benefits} />
-  );
+    return (
+        <Swiper
+            modules={[Pagination]}
+            pagination={{clickable: true}}
+            // breakpoints={{
+            //     0: {
+            //       slidesPerView: 1,
+            //       centeredSlides: true
+            //     },
+            //     769: {
+            //       slidesPerView: 2,
+            //       centeredSlides: true
+            //     },
+            //     1280: {
+            //       slidesPerView: 3,
+            //     },
+            // }}
+            //centeredSlides={true}
+            slidesPerView={'auto'}
+        >
+            {
+                plans.map((plan, index) => 
+                    <SwiperSlide key={plan.type} virtualIndex={index} className='max-w-fit'>
+                        <PricingCard plan={plan} benefits={benefits} />
+                    </SwiperSlide>
+                )
+            }
+        </Swiper>
+    );
 };

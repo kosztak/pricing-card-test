@@ -1,7 +1,7 @@
 import BenefitItem from "./BenefitItem";
 import Button from "./ui/Button";
 
-export default function PricingCard({ plan, benefits, isDesktopView }) {
+export default function PricingCard({ plan, benefits }) {
     function getTierColor() {
         switch (plan.type) {
             case 'free':
@@ -16,9 +16,9 @@ export default function PricingCard({ plan, benefits, isDesktopView }) {
     }
 
     return (
-        <div>
+        <div className="mx-[25px]">
             {/* tier label */}
-            <div className={`${getTierColor()} ${isDesktopView ? 'w-[169px]' : ''} h-[35px] rounded-t-[8px] pl-[28px] py-[6px]`}>
+            <div className={`${getTierColor()} w-[169px] h-[35px] rounded-t-[8px] pl-[28px] py-[6px]`}>
                 <p className="text-white font-text-b">{plan.type.toUpperCase()}</p>
             </div>
             {/* main section */}
