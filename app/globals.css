@@ -44,3 +44,21 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
 }
+
+/* .swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+}
+.swiper-wrapper {
+  flex-shrink: 1;
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+} */

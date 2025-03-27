@@ -16,13 +16,13 @@ export default function PricingCard({ plan, benefits }) {
     }
 
     return (
-        <div className="mx-[25px]">
+        <div>
             {/* tier label */}
             <div className={`${getTierColor()} w-[169px] h-[35px] rounded-t-[8px] pl-[28px] py-[6px]`}>
                 <p className="text-white font-text-b">{plan.type.toUpperCase()}</p>
             </div>
             {/* main section */}
-            <div className="bg-white w-[327px] h-[381px] py-[32px] px-[16px] rounded-b-[8px] flex flex-col gap-[16px]">
+            <div className="bg-white h-[381px] py-[32px] px-[16px] rounded-b-[8px] flex flex-col gap-[16px]">
                 {/* pricing panel */}
                 <div>
                     <p className="text-center font-menu-title">{plan.price}$</p>
@@ -32,7 +32,7 @@ export default function PricingCard({ plan, benefits }) {
                 <div>
                     {
                         benefits.map((benefit, index) =>
-                            <BenefitItem key={benefit} text={benefit} hasBenefit={plan.benefits[index]} hasBackground={index % 2 !== 0} />
+                            <BenefitItem key={benefit} text={benefit} hasBenefit={plan.benefits[index]} hasBackground={index % 2 === 0} />
                         )
                     }
                 </div>

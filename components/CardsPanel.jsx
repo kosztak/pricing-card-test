@@ -14,26 +14,25 @@ export default ({ plans, benefits }) => {
         <Swiper
             modules={[Pagination]}
             pagination={{clickable: true}}
-            // breakpoints={{
-            //     0: {
-            //       slidesPerView: 1,
-            //       centeredSlides: true
-            //     },
-            //     769: {
-            //       slidesPerView: 2,
-            //       centeredSlides: true
-            //     },
-            //     1280: {
-            //       slidesPerView: 3,
-            //     },
-            // }}
+            slidesPerView={1}
+            spaceBetween={50}
+            breakpoints={{
+                769: {
+                  slidesPerView: 2,
+                },
+                1280: {
+                  slidesPerView: 3,
+                },
+            }}
             //centeredSlides={true}
-            slidesPerView={'auto'}
+            //slidesPerView={'auto'}
         >
             {
                 plans.map((plan, index) => 
-                    <SwiperSlide key={plan.type} virtualIndex={index} className='max-w-fit'>
-                        <PricingCard plan={plan} benefits={benefits} />
+                    <SwiperSlide key={plan.type} virtualIndex={index}>
+
+                            <PricingCard plan={plan} benefits={benefits} />
+
                     </SwiperSlide>
                 )
             }
