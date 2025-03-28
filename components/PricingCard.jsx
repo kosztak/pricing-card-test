@@ -5,28 +5,28 @@ export default function PricingCard({ plan, benefits }) {
     function getTierColor() {
         switch (plan.type) {
             case 'free':
-                return "bg-[#3A4F39]";
+                return "bg-dark-green";
             case 'premium':
-                return 'bg-[#F8D254]';
+                return 'bg-yellow';
             case 'pro':
-                return 'bg-[#A0CD9E]';
+                return 'bg-green';
             default:
-                return 'bg-[#fff]'
+                return 'bg-forground';
         }
     }
 
     return (
         <div>
             {/* tier label */}
-            <div className={`${getTierColor()} w-[169px] h-[35px] rounded-t-[8px] pl-[28px] py-[6px]`}>
-                <p className="text-white font-text-b">{plan.type.toUpperCase()}</p>
+            <div className={`${getTierColor()} w-[60%] rounded-t-[8px] pl-[28px] py-[6px]`}>
+                <p className="text-white font-semibold">{plan.type.toUpperCase()}</p>
             </div>
             {/* main section */}
-            <div className="bg-white h-[381px] py-[32px] px-[16px] rounded-b-[8px] flex flex-col gap-[16px]">
+            <div className="bg-white py-[32px] px-[16px] rounded-b-[8px] flex flex-col gap-[16px]">
                 {/* pricing panel */}
                 <div>
-                    <p className="text-center font-menu-title">{plan.price}$</p>
-                    <p className="text-center font-subtext">{plan.duration}</p>
+                    <p className="text-center font-semibold text-[32px]">{plan.price}$</p>
+                    <p className="text-center font-subtext text-xs">{plan.duration}</p>
                 </div>
                 {/* aviable benefits list */}
                 <div>

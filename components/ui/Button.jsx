@@ -1,6 +1,6 @@
 export default function Button({ children }) {
     return (
-        <button className="bg-[#3A4F39] text-white font-button h-[51px] rounded-[4px]">
+        <button className="bg-dark-green text-white text-lg font-medium py-[12px] rounded-[4px]">
             {children}
         </button>
     )

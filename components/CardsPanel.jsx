@@ -6,7 +6,6 @@ import { Pagination } from 'swiper/modules';
 import PricingCard from './PricingCard';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default ({ plans, benefits }) => {
@@ -30,9 +29,7 @@ export default ({ plans, benefits }) => {
             {
                 plans.map((plan, index) => 
                     <SwiperSlide key={plan.type} virtualIndex={index}>
-
                             <PricingCard plan={plan} benefits={benefits} />
-
                     </SwiperSlide>
                 )
             }

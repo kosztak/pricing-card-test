@@ -8,26 +8,14 @@ export default {
     extend: {
       colors: {
         background: '#EFF6F3',
-        foreground: '#2D2E2E'
+        foreground: '#2D2E2E',
+        darkGreen: '#3A4F39',
+        green: '#A0CD9E',
+        yellow: '#F8D254',
+        lightGray: '#F6F6F6',
       },
       fontFamily: {
-        'menu-title': ['Inter', 'sans-serif'],
-        text: ['Inter', 'sans-serif'],
-        'text-b': ['Inter', 'sans-serif'],
-        button: ['Inter', 'sans-serif'],
-        subtext: ['Inter', 'sans-serif']
-      },
-      fontSize: {
-        'menu-title': '50px',
-        text: '16px',
-        'text-b': '16px',
-        button: '18px',
-        subtext: '12px'
-      },
-      fontWeight: {
-        'menu-title': '600',
-        'text-b': '600',
-        button: '500'
+        sans: ['Inter', 'sans-serif'],
       }
     }
   },

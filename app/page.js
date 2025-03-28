@@ -40,9 +40,9 @@ export default async function Home() {
   ];
 
   const benefits = [
-    'PNG fsdfs',
-    'Figma afasdfs',
-    'dfsdgffs'
+    'PNG templates',
+    'Figma responsive components',
+    'Constant updates'
   ]
 
   return (
